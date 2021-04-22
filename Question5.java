@@ -27,7 +27,13 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
-    
+    System.out.println("Enter number of integers");
+    int number_int = in.nextInt();
+
+    for(int i = 0;
+    i < number_int;
+    i++) {
+      System.out.println("Enter integer");
+    }
   }
 }

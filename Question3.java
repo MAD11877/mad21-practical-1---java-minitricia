@@ -11,11 +11,10 @@ public class Question3
      */
      
     Scanner in = new Scanner(System.in);
-    System.out.println("Enter number");
     int number = in.nextInt();
 
     int multiply = number*number;
-    System.out.println(number + "x" + number + "=" + multiply);
+    System.out.println(multiply);
     
   }
 }
