@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.*;
 
 public class Question5
 {
@@ -27,13 +29,34 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    System.out.println("Enter number of integers");
     int number_int = in.nextInt();
+
+    ArrayList<Integer> data = new ArrayList<Integer>();
+    int max = 0;
+    int result = 0;
 
     for(int i = 0;
     i < number_int;
     i++) {
-      System.out.println("Enter integer");
+
+      int number = in.nextInt();
+      data.add(number);
+
     }
+
+    for (int j = 0; 
+    j < number_int; 
+    j++) {
+      int num = data.get(j);
+      int occurrences = Collections.frequency(data, num);
+      if (max < occurrences) {
+      max = occurrences;
+      result = num;
+      }
+    }
+
+    System.out.print(result);
   }
 }
+
+
